@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my personal portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="https://t4.ftcdn.net/jpg/04/51/74/43/360_F_451744391_932DU0eXgGbpDZhcemuTjz1jTlqiCuIF.jpg"
+          height="100PX width100px">
+        <ul>
+          <li><a href="#"> Home</a></li>
+          <li><a href="#"> About</a></li>
+          <li><a href="#"> Services</a></li>
+          <li><a href="#"> Portfolio</a></li>
+          <li><a href="#"> Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Software Developer </p>
+        <h1>Hi,I'm <span>Himanshi</span><br>From India</h1>
+
+      </div>
+    </div>
+  </div>
+  <!-- ------------------about ------------------------>
+  <div id="about">
+    <div class=" container">
+      <div class="row">
+        <div class="about-col-1">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd79vLgTevvM660Nk6lT-pt3ZZQcY7WnxSpQ&s" alt="random" height="500px" width="500" >
+        </div>
+        <div class="about-col-2">
+          <h1 class="subtitle">About ME</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing<br> elit. Vitae et quia suscipit similique minima atque illo voluptatum dolores corrupti ratione? Atque esse eius quia placeat et aliquam odit autem debitis.</p>
+           <div class="tab-titles">
+            <p class="tab-links active-link  " onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+           </div>
+           <div class="tab-contents active-tab " id="skills">
+            <ul>
+              <li><span> Web developer</span><br>Designing Web Application Interfaces <br>Front-end: HTML, CSS, JavaScript frameworks (React, Angular, Vue.js).
+                <br>Back-end: Node.js, Django, Flask, Ruby on Rails.
+                <br>Full-stack development experience (MEAN, MERN).</li>
+              <li><span></span><br></li>
+              <li><span>  Software Development</span><br>Experience in full software development lifecycle (SDLC).
+                <br>Agile methodologies (Scrum, Kanban).
+                <br>Version control (Git, GitHub, GitLab).
+                </li>
+            </ul>
+
+           </div>
+           <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>#1234 Web developer</span><br>Designing Web Application Interfaces</li>
+              <li><span> Web developer</span><br>Designing Web Application Interfaces</li>
+              <li><span> Web developer</span><br>Designing Web Application Interfaces</li>
+            </ul>
+
+           </div>
+           <div class="tab-contents" id="education">
+            <ul>
+              <li><span> #5869568Web developer</span><br>Designing Web Application Interfaces</li>
+              <li><span> Web developer</span><br>Designing Web Application Interfaces</li>
+              <li><span> Web developer</span><br>Designing Web Application Interfaces</li>
+            </ul>
+
+           </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- --------------------services------------------- -->
+<div id="services">
+  <div class="container">
+    <h1 class="subtitle">My Services</h1>
+    <div class="services-list">
+      <div>
+        <h2>
+          Web Design
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis veniam quibusdam impedit nobis rerum velit, voluptatum, repudiandae laudantium vitae obcaecati, eveniet explicabo. Sunt porro totam, quas dolore perferendis officia ratione.</p>
+        <a href="#" >learn more</a>
+      </div>
+      <div>
+        <h2>
+          App Development
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis veniam quibusdam impedit nobis rerum velit, voluptatum, repudiandae laudantium vitae obcaecati, eveniet explicabo. Sunt porro totam, quas dolore perferendis officia ratione.</p>
+        <a href="#" >learn more</a>
+      </div>
+      <div>
+        <h2>
+       Full stack
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis veniam quibusdam impedit nobis rerum velit, voluptatum, repudiandae laudantium vitae obcaecati, eveniet explicabo. Sunt porro totam, quas dolore perferendis officia ratione.</p>
+        <a href="#" >learn more</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<script>
+
+  var tablinks= document.getElementsByClassName("tab-links");
+  var tabcontents= document.getElementsByClassName("tab-contents");
+  function opentab(tabname){
+    for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+  }
+</script>
+
+</body>
+
+</html>
